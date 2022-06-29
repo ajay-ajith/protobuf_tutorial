@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "articlepb/";
+
+enum ArticleType{
+    news = 0;
+    social = 1;
+}
+
+message Article {
+    int32 id = 1;
+    string title = 2;
+    repeated string authors = 3;
+    string content = 4;
+    ArticleType type = 5;
+}
